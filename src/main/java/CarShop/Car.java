@@ -1,6 +1,5 @@
 package CarShop;
 
-
 import java.util.List;
 
 public class Car {
@@ -23,24 +22,17 @@ public class Car {
         this.segment = segment;
     }
 
-
     public static void filterCars(List<Car> carList) {
         for (Car car : carList) {
-            if ((car.producent.getProducentName(car.producent.getModel())==Producent.ProducentName.BMW) && (car.isAutomaticGear) && (car.dimension.getTankCapaity()>300)) {
-                System.out.println("Found matching car in the " + car.market.getName() + " Market.\n"+"It is available in the following countries:");
-                for (Country country: car.market.getCountries()) {
+            if ((car.producent.getProducentName(car.producent.getModel()) == Producent.ProducentName.BMW) && (car.isAutomaticGear) && (car.dimension.getTankCapaity() > 300)) {
+                System.out.println("Found matching car in the " + car.market.getName() + " Market.\n" + "It is available in the following countries:");
+                for (Country country : car.market.getCountries()) {
                     System.out.println(country.getCountryNameInFormat());
                 }
                 System.out.println("");
             }
         }
     }
-
-
-
-
-
-
 }
 
 

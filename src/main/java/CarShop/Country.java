@@ -9,7 +9,7 @@ public class Country {
         this.countrySign = getChar(countryName);
     }
 
-    public char getChar (String countryName){
+    public char getChar(String countryName) {
         return countryName.charAt(0);
     }
 

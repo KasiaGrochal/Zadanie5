@@ -19,12 +19,12 @@ public class Main {
         Country country3 = new Country("Denmark");
         Country country4 = new Country("Australia");
 
-        Market business = new Market("Business",businessMarketList,country,country1, country3);
-        Market privateUsage= new Market("Private", privateMarketList, country,country3,country2);
-        Market soho= new Market("SOHO", sohoMarketList, country,country1,country2);
-        Market gov= new Market("Government", governmentMarketList, country,country4,country2);
-        Market vip= new Market("VIP", vipMarketlist, country4,country3,country1);
-        business.addCountryToMarket(country4,businessMarketList);
+        Market business = new Market("Business", businessMarketList, country, country1, country3);
+        Market privateUsage = new Market("Private", privateMarketList, country, country3, country2);
+        Market soho = new Market("SOHO", sohoMarketList, country, country1, country2);
+        Market gov = new Market("Government", governmentMarketList, country, country4, country2);
+        Market vip = new Market("VIP", vipMarketlist, country4, country3, country1);
+        business.addCountryToMarket(country4, businessMarketList);
 
 
         Dimension dimension1 = new Dimension(20, 20, 350);
@@ -53,20 +53,20 @@ public class Main {
         List<Car> carList = new ArrayList<>();
 
         Car carA = new Car(producent1, true, business, dimension3, Car.Segment.PREMIUM);
-        Car carB = new Car(producent2, false,privateUsage, dimension4, Car.Segment.MEDIUM);
+        Car carB = new Car(producent2, false, privateUsage, dimension4, Car.Segment.MEDIUM);
         Car carC = new Car(producent3, true, gov, dimension5, Car.Segment.STANDARD);
-        Car carD = new Car(producent4, false,privateUsage, dimension7, Car.Segment.MEDIUM);
-        Car carE = new Car(producent5, true, business, dimension8, Car.Segment.PREMIUM);
-        Car carF = new Car(producent6, false,soho, dimension6, Car.Segment.STANDARD);
+        Car carD = new Car(producent4, false, privateUsage, dimension7, Car.Segment.MEDIUM);
+        Car carE = new Car(producent5, true, business, dimension9, Car.Segment.PREMIUM);
+        Car carF = new Car(producent6, false, soho, dimension6, Car.Segment.STANDARD);
         Car carG = new Car(producent7, true, business, dimension2, Car.Segment.PREMIUM);
-        Car carH = new Car(producent8, false,soho, dimension1, Car.Segment.MEDIUM);
+        Car carH = new Car(producent8, false, soho, dimension1, Car.Segment.MEDIUM);
         Car carI = new Car(producent9, true, business, dimension8, Car.Segment.STANDARD);
-        Car carJ = new Car(producent10, false,business, dimension10, Car.Segment.PREMIUM);
+        Car carJ = new Car(producent10, false, business, dimension10, Car.Segment.PREMIUM);
         Car carK = new Car(producent1, true, privateUsage, dimension3, Car.Segment.MEDIUM);
         Car carL = new Car(producent1, true, business, dimension8, Car.Segment.PREMIUM);
-        Car carM = new Car(producent1, false,gov, dimension8, Car.Segment.PREMIUM);
+        Car carM = new Car(producent1, false, gov, dimension8, Car.Segment.PREMIUM);
         Car carN = new Car(producent2, true, business, dimension4, Car.Segment.STANDARD);
-        Car carO = new Car(producent3, false,vip, dimension7, Car.Segment.MEDIUM);
+        Car carO = new Car(producent3, false, vip, dimension7, Car.Segment.MEDIUM);
 
         carList.add(carA);
         carList.add(carB);
@@ -86,10 +86,10 @@ public class Main {
 
         Car.filterCars(carList);
 
-        }
+    }
 
 
-        }
+}
 
 
 

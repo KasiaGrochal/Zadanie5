@@ -13,10 +13,10 @@ public class Market {
         countries.add(country1);
         countries.add(country2);
         countries.add(country3);
-        }
+    }
 
-    public void addCountryToMarket (Country newCountry, List<Country> marketCountryList){
-       marketCountryList.add(newCountry);
+    public void addCountryToMarket(Country newCountry, List<Country> marketCountryList) {
+        marketCountryList.add(newCountry);
     }
 
     public String getName() {
