@@ -13,10 +13,6 @@ public class Country {
         return countryName.charAt(0);
     }
 
-    public String getCountryName() {
-        return countryName;
-    }
-
     public String getCountryNameInFormat() {
         return this.countryName + " - " + this.countrySign;
     }

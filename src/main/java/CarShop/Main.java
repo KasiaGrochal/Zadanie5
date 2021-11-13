@@ -38,28 +38,28 @@ public class Main {
         Dimension dimension9 = new Dimension(29, 23, 290);
         Dimension dimension10 = new Dimension(30, 29, 180);
 
-        Producent producent1 = new Producent("BMW");
-        Producent producent2 = new Producent("Audi");
-        Producent producent3 = new Producent("Suzuki");
-        Producent producent4 = new Producent("Renault");
-        Producent producent5 = new Producent("Toyota");
-        Producent producent6 = new Producent("VOLVO");
-        Producent producent7 = new Producent("Ford");
-        Producent producent8 = new Producent("Fiat");
-        Producent producent9 = new Producent("Peugeot");
-        Producent producent10 = new Producent("JEEP");
+        Producent producent1 = new Producent(Producent.Model.Z4Roadster);
+        Producent producent2 = new Producent(Producent.Model.X3);
+        Producent producent3 = new Producent(Producent.Model.XC40);
+        Producent producent4 = new Producent(Producent.Model.i4M50);
+        Producent producent5 = new Producent(Producent.Model.Avensis);
+        Producent producent6 = new Producent(Producent.Model.A3);
+        Producent producent7 = new Producent(Producent.Model.A4);
+        Producent producent8 = new Producent(Producent.Model.A6);
+        Producent producent9 = new Producent(Producent.Model.S60);
+        Producent producent10 = new Producent(Producent.Model.Yaris);
 
 
         List<Car> carList = new ArrayList<>();
 
-        Car carA = new Car(producent1, true, business, dimension1, Car.Segment.PREMIUM);
+        Car carA = new Car(producent1, true, business, dimension3, Car.Segment.PREMIUM);
         Car carB = new Car(producent2, false,privateUsage, dimension4, Car.Segment.MEDIUM);
         Car carC = new Car(producent3, true, gov, dimension5, Car.Segment.STANDARD);
         Car carD = new Car(producent4, false,privateUsage, dimension7, Car.Segment.MEDIUM);
         Car carE = new Car(producent5, true, business, dimension8, Car.Segment.PREMIUM);
         Car carF = new Car(producent6, false,soho, dimension6, Car.Segment.STANDARD);
         Car carG = new Car(producent7, true, business, dimension2, Car.Segment.PREMIUM);
-        Car carH = new Car(producent8, false,soho, dimension9, Car.Segment.MEDIUM);
+        Car carH = new Car(producent8, false,soho, dimension1, Car.Segment.MEDIUM);
         Car carI = new Car(producent9, true, business, dimension8, Car.Segment.STANDARD);
         Car carJ = new Car(producent10, false,business, dimension10, Car.Segment.PREMIUM);
         Car carK = new Car(producent1, true, privateUsage, dimension3, Car.Segment.MEDIUM);
