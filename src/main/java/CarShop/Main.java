@@ -38,16 +38,16 @@ public class Main {
         Dimension dimension9 = new Dimension(29, 23, 290);
         Dimension dimension10 = new Dimension(30, 29, 180);
 
-        Producent producent1 = new Producent(Producent.Model.Z4Roadster);
-        Producent producent2 = new Producent(Producent.Model.X3);
-        Producent producent3 = new Producent(Producent.Model.XC40);
-        Producent producent4 = new Producent(Producent.Model.i4M50);
-        Producent producent5 = new Producent(Producent.Model.Avensis);
-        Producent producent6 = new Producent(Producent.Model.A3);
-        Producent producent7 = new Producent(Producent.Model.A4);
-        Producent producent8 = new Producent(Producent.Model.A6);
-        Producent producent9 = new Producent(Producent.Model.S60);
-        Producent producent10 = new Producent(Producent.Model.Yaris);
+        Producent producent1 = new Producent(Producent.Model.Z4_ROADSTER, Producent.Type.KABRIOLET);
+        Producent producent2 = new Producent(Producent.Model.X3, Producent.Type.SUV);
+        Producent producent3 = new Producent(Producent.Model.XC40, Producent.Type.SUV);
+        Producent producent4 = new Producent(Producent.Model.i4M50, Producent.Type.COUPE);
+        Producent producent5 = new Producent(Producent.Model.AVENSIS, Producent.Type.SEDAN);
+        Producent producent6 = new Producent(Producent.Model.A3, Producent.Type.SEDAN);
+        Producent producent7 = new Producent(Producent.Model.A4, Producent.Type.SEDAN);
+        Producent producent8 = new Producent(Producent.Model.A6, Producent.Type.COUPE);
+        Producent producent9 = new Producent(Producent.Model.S60, Producent.Type.COUPE);
+        Producent producent10 = new Producent(Producent.Model.YARIS, Producent.Type.MIKRO);
 
 
         List<Car> carList = new ArrayList<>();
@@ -85,6 +85,7 @@ public class Main {
         carList.add(carO);
 
         Car.filterCars(carList);
+
 
     }
 
