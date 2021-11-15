@@ -13,18 +13,18 @@ public class Main {
         List<Country> governmentMarketList = new ArrayList<>();
         List<Country> vipMarketlist = new ArrayList<>();
 
-        Country country = new Country("Poland");
-        Country country1 = new Country("China");
-        Country country2 = new Country("Netherlands");
-        Country country3 = new Country("Denmark");
-        Country country4 = new Country("Australia");
+        Country poland = new Country("Poland");
+        Country china = new Country("China");
+        Country netherlands = new Country("Netherlands");
+        Country denmark = new Country("Denmark");
+        Country australia = new Country("Australia");
 
-        Market business = new Market("Business", businessMarketList, country, country1, country3);
-        Market privateUsage = new Market("Private", privateMarketList, country, country3, country2);
-        Market soho = new Market("SOHO", sohoMarketList, country, country1, country2);
-        Market gov = new Market("Government", governmentMarketList, country, country4, country2);
-        Market vip = new Market("VIP", vipMarketlist, country4, country3, country1);
-        business.addCountryToMarket(country4, businessMarketList);
+        Market business = new Market("Business", businessMarketList, poland, china, denmark);
+        Market Private = new Market("Private", privateMarketList, poland, denmark, netherlands);
+        Market soho = new Market("SOHO", sohoMarketList, poland, china, netherlands);
+        Market gov = new Market("Government", governmentMarketList, poland, australia, netherlands);
+        Market vip = new Market("VIP", vipMarketlist, australia, denmark, china);
+        business.addCountryToMarket(australia, businessMarketList);
 
 
         Dimension dimension1 = new Dimension(20, 20, 350);
@@ -38,51 +38,52 @@ public class Main {
         Dimension dimension9 = new Dimension(29, 23, 290);
         Dimension dimension10 = new Dimension(30, 29, 180);
 
-        Producent producent1 = new Producent(Producent.Model.Z4_ROADSTER, Producent.Type.KABRIOLET);
-        Producent producent2 = new Producent(Producent.Model.X3, Producent.Type.SUV);
-        Producent producent3 = new Producent(Producent.Model.XC40, Producent.Type.SUV);
-        Producent producent4 = new Producent(Producent.Model.i4M50, Producent.Type.COUPE);
-        Producent producent5 = new Producent(Producent.Model.AVENSIS, Producent.Type.SEDAN);
-        Producent producent6 = new Producent(Producent.Model.A3, Producent.Type.SEDAN);
-        Producent producent7 = new Producent(Producent.Model.A4, Producent.Type.SEDAN);
-        Producent producent8 = new Producent(Producent.Model.A6, Producent.Type.COUPE);
-        Producent producent9 = new Producent(Producent.Model.S60, Producent.Type.COUPE);
-        Producent producent10 = new Producent(Producent.Model.YARIS, Producent.Type.MIKRO);
+        Producent bmw = new Producent(Producent.Model.Z4_ROADSTER, Producent.Type.KABRIOLET);
+        Producent bmw2 = new Producent(Producent.Model.X3, Producent.Type.SUV);
+        Producent volvo1 = new Producent(Producent.Model.C30, Producent.Type.SUV);
+        Producent bmw3 = new Producent(Producent.Model.i4M50, Producent.Type.COUPE);
+        Producent toyota = new Producent(Producent.Model.AVENSIS, Producent.Type.SEDAN);
+        Producent audi = new Producent(Producent.Model.A3, Producent.Type.SEDAN);
+        Producent toyota3 = new Producent(Producent.Model.COROLLA, Producent.Type.SEDAN);
+        Producent audi1 = new Producent(Producent.Model.A6, Producent.Type.COUPE);
+        Producent volvo = new Producent(Producent.Model.S60, Producent.Type.COUPE);
+        Producent toyota1 = new Producent(Producent.Model.YARIS, Producent.Type.MIKRO);
 
 
         List<Car> carList = new ArrayList<>();
 
-        Car carA = new Car(producent1, true, business, dimension3, Car.Segment.PREMIUM);
-        Car carB = new Car(producent2, false, privateUsage, dimension4, Car.Segment.MEDIUM);
-        Car carC = new Car(producent3, true, gov, dimension5, Car.Segment.STANDARD);
-        Car carD = new Car(producent4, false, privateUsage, dimension7, Car.Segment.MEDIUM);
-        Car carE = new Car(producent5, true, business, dimension9, Car.Segment.PREMIUM);
-        Car carF = new Car(producent6, false, soho, dimension6, Car.Segment.STANDARD);
-        Car carG = new Car(producent7, true, business, dimension2, Car.Segment.PREMIUM);
-        Car carH = new Car(producent8, false, soho, dimension1, Car.Segment.MEDIUM);
-        Car carI = new Car(producent9, true, business, dimension8, Car.Segment.STANDARD);
-        Car carJ = new Car(producent10, false, business, dimension10, Car.Segment.PREMIUM);
-        Car carK = new Car(producent1, true, privateUsage, dimension3, Car.Segment.MEDIUM);
-        Car carL = new Car(producent1, true, business, dimension8, Car.Segment.PREMIUM);
-        Car carM = new Car(producent1, false, gov, dimension8, Car.Segment.PREMIUM);
-        Car carN = new Car(producent2, true, business, dimension4, Car.Segment.STANDARD);
-        Car carO = new Car(producent3, false, vip, dimension7, Car.Segment.MEDIUM);
+        Car bmwRoadster = new Car(bmw, true, business, dimension3, Car.Segment.PREMIUM);
+        Car bmwRoadster_2 = new Car(bmw, true, Private, dimension3, Car.Segment.MEDIUM);
+        Car bmwX3 = new Car(bmw2, false, Private, dimension4, Car.Segment.MEDIUM);
+        Car bmwX3_2 = new Car(bmw2, true, business, dimension8, Car.Segment.PREMIUM);
+        Car bmwI4M50 = new Car(bmw3, false, Private, dimension7, Car.Segment.MEDIUM);
+        Car volvoC30 = new Car(volvo1, true, gov, dimension5, Car.Segment.STANDARD);
+        Car volvoS60 = new Car(volvo, true, business, dimension8, Car.Segment.STANDARD);
+        Car volvoS60_2 = new Car(volvo, false, gov, dimension2, Car.Segment.MEDIUM);
+        Car toyotaAvensis = new Car(toyota, true, business, dimension9, Car.Segment.PREMIUM);
+        Car toyotaAvensis_2 = new Car(toyota, false, Private, dimension7, Car.Segment.MEDIUM);
+        Car toyotaYaris = new Car(toyota1, false, business, dimension10, Car.Segment.STANDARD);
+        Car toyotaCorolla = new Car(toyota3, true, Private, dimension2, Car.Segment.MEDIUM);
+        Car audiA6 = new Car(audi1, false, soho, dimension1, Car.Segment.MEDIUM);
+        Car audiA6_2 = new Car(audi1, true, business, dimension8, Car.Segment.PREMIUM);
+        Car audiA3 = new Car(audi, false, soho, dimension6, Car.Segment.STANDARD);
 
-        carList.add(carA);
-        carList.add(carB);
-        carList.add(carC);
-        carList.add(carD);
-        carList.add(carE);
-        carList.add(carF);
-        carList.add(carG);
-        carList.add(carH);
-        carList.add(carI);
-        carList.add(carJ);
-        carList.add(carK);
-        carList.add(carL);
-        carList.add(carM);
-        carList.add(carN);
-        carList.add(carO);
+        carList.add(bmwRoadster);
+        carList.add(bmwRoadster_2);
+        carList.add(bmwX3);
+        carList.add(bmwX3_2);
+        carList.add(bmwI4M50);
+        carList.add(volvoC30);
+        carList.add(volvoS60);
+        carList.add(volvoS60_2);
+        carList.add(toyotaAvensis);
+        carList.add(toyotaAvensis_2);
+        carList.add(toyotaYaris);
+        carList.add(toyotaCorolla);
+        carList.add(audiA6);
+        carList.add(audiA6_2);
+        carList.add(audiA3);
+
 
         Car.filterCars(carList);
 
