@@ -2,8 +2,8 @@ package CarShop;
 
 public class Producent {
     private ProducentName producentName;
-    private Model model;
-    private Type type;
+    private final Model model;
+    private final Type type;
 
     public enum ProducentName {
         TOYOTA, BMW, AUDI, VOLVO

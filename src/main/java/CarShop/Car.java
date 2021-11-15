@@ -4,10 +4,10 @@ import java.util.List;
 
 public class Car {
 
-    private Producent producent;
-    private boolean isAutomaticGear;
-    private Market market;
-    private Dimension dimension;
+    private final Producent producent;
+    private final boolean isAutomaticGear;
+    private final Market market;
+    private final Dimension dimension;
     private final Segment segment;
 
     public enum Segment {
