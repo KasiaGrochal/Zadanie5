@@ -20,7 +20,7 @@ public class Main {
         Country australia = new Country("Australia");
 
         Market business = new Market("Business", businessMarketList, poland, china, denmark);
-        Market Private = new Market("Private", privateMarketList, poland, denmark, netherlands);
+        Market privateUse = new Market("Private", privateMarketList, poland, denmark, netherlands);
         Market soho = new Market("SOHO", sohoMarketList, poland, china, netherlands);
         Market gov = new Market("Government", governmentMarketList, poland, australia, netherlands);
         Market vip = new Market("VIP", vipMarketlist, australia, denmark, china);
@@ -53,17 +53,17 @@ public class Main {
         List<Car> carList = new ArrayList<>();
 
         Car bmwRoadster = new Car(bmw, true, business, dimension3, Car.Segment.PREMIUM);
-        Car bmwRoadster_2 = new Car(bmw, true, Private, dimension3, Car.Segment.MEDIUM);
-        Car bmwX3 = new Car(bmw2, false, Private, dimension4, Car.Segment.MEDIUM);
+        Car bmwRoadster_2 = new Car(bmw, true, privateUse, dimension3, Car.Segment.MEDIUM);
+        Car bmwX3 = new Car(bmw2, false, privateUse, dimension4, Car.Segment.MEDIUM);
         Car bmwX3_2 = new Car(bmw2, true, business, dimension8, Car.Segment.PREMIUM);
-        Car bmwI4M50 = new Car(bmw3, false, Private, dimension7, Car.Segment.MEDIUM);
+        Car bmwI4M50 = new Car(bmw3, false, privateUse, dimension7, Car.Segment.MEDIUM);
         Car volvoC30 = new Car(volvo1, true, gov, dimension5, Car.Segment.STANDARD);
         Car volvoS60 = new Car(volvo, true, business, dimension8, Car.Segment.STANDARD);
         Car volvoS60_2 = new Car(volvo, false, gov, dimension2, Car.Segment.MEDIUM);
         Car toyotaAvensis = new Car(toyota, true, business, dimension9, Car.Segment.PREMIUM);
-        Car toyotaAvensis_2 = new Car(toyota, false, Private, dimension7, Car.Segment.MEDIUM);
+        Car toyotaAvensis_2 = new Car(toyota, false, privateUse, dimension7, Car.Segment.MEDIUM);
         Car toyotaYaris = new Car(toyota1, false, business, dimension10, Car.Segment.STANDARD);
-        Car toyotaCorolla = new Car(toyota3, true, Private, dimension2, Car.Segment.MEDIUM);
+        Car toyotaCorolla = new Car(toyota3, true, vip, dimension2, Car.Segment.MEDIUM);
         Car audiA6 = new Car(audi1, false, soho, dimension1, Car.Segment.MEDIUM);
         Car audiA6_2 = new Car(audi1, true, business, dimension8, Car.Segment.PREMIUM);
         Car audiA3 = new Car(audi, false, soho, dimension6, Car.Segment.STANDARD);
@@ -83,7 +83,6 @@ public class Main {
         carList.add(audiA6);
         carList.add(audiA6_2);
         carList.add(audiA3);
-
 
         Car.filterCars(carList);
 
