@@ -1,5 +1,9 @@
 package CarShop;
 
+import CarShop.Enums.CountryName;
+import CarShop.Enums.Model;
+import CarShop.Enums.Type;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,11 +17,11 @@ public class Main {
         List<Country> governmentMarketList = new ArrayList<>();
         List<Country> vipMarketlist = new ArrayList<>();
 
-        Country poland = new Country("Poland");
-        Country china = new Country("China");
-        Country netherlands = new Country("Netherlands");
-        Country denmark = new Country("Denmark");
-        Country australia = new Country("Australia");
+        Country poland = new Country(CountryName.POLAND);
+        Country china = new Country(CountryName.CHINA);
+        Country netherlands = new Country(CountryName.NETHERLANDS);
+        Country denmark = new Country(CountryName.DENMARK);
+        Country australia = new Country(CountryName.AUSTRALIA);
 
         Market business = new Market("Business", businessMarketList, poland, china, denmark);
         Market privateUse = new Market("Private", privateMarketList, poland, denmark, netherlands);
@@ -38,16 +42,16 @@ public class Main {
         Dimension dimension9 = new Dimension(29, 23, 290);
         Dimension dimension10 = new Dimension(30, 29, 180);
 
-        Producent bmw = new Producent(Producent.Model.Z4_ROADSTER, Producent.Type.KABRIOLET);
-        Producent bmw2 = new Producent(Producent.Model.X3, Producent.Type.SUV);
-        Producent volvo1 = new Producent(Producent.Model.C30, Producent.Type.SUV);
-        Producent bmw3 = new Producent(Producent.Model.i4M50, Producent.Type.COUPE);
-        Producent toyota = new Producent(Producent.Model.AVENSIS, Producent.Type.SEDAN);
-        Producent audi = new Producent(Producent.Model.A3, Producent.Type.SEDAN);
-        Producent toyota3 = new Producent(Producent.Model.COROLLA, Producent.Type.SEDAN);
-        Producent audi1 = new Producent(Producent.Model.A6, Producent.Type.COUPE);
-        Producent volvo = new Producent(Producent.Model.S60, Producent.Type.COUPE);
-        Producent toyota1 = new Producent(Producent.Model.YARIS, Producent.Type.MIKRO);
+        Producent bmw = new Producent(Model.Z4_ROADSTER, Type.KABRIOLET);
+        Producent bmw2 = new Producent(Model.X3, Type.SUV);
+        Producent volvo1 = new Producent(Model.C30, Type.SUV);
+        Producent bmw3 = new Producent(Model.i4M50, Type.COUPE);
+        Producent toyota = new Producent(Model.AVENSIS, Type.SEDAN);
+        Producent audi = new Producent(Model.A3, Type.SEDAN);
+        Producent toyota3 = new Producent(Model.COROLLA, Type.SEDAN);
+        Producent audi1 = new Producent(Model.A6, Type.COUPE);
+        Producent volvo = new Producent(Model.S60, Type.COUPE);
+        Producent toyota1 = new Producent(Model.YARIS, Type.MIKRO);
 
 
         List<Car> carList = new ArrayList<>();

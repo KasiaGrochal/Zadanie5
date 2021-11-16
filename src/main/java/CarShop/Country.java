@@ -1,19 +1,21 @@
 package CarShop;
 
-public class Country {
-    private final String countryName;
-    private final char countrySign;
+import CarShop.Enums.CountryName;
 
-    public Country(String countryName) {
+public class Country {
+    private final char countrySign;
+    private final CountryName countryName;
+
+    public Country(CountryName countryName) {
         this.countryName = countryName;
         this.countrySign = getChar(countryName);
     }
 
-    public char getChar(String countryName) {
-        return countryName.charAt(0);
+    public char getChar(CountryName countryName) {
+        return countryName.getCountryDisplay().charAt(0);
     }
 
     public String getCountryNameInFormat() {
-        return this.countryName + " - " + this.countrySign;
+        return this.countryName.getCountryDisplay() + " - " + this.countrySign;
     }
 }

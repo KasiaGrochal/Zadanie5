@@ -1,26 +1,15 @@
 package CarShop;
 
+import CarShop.Enums.Model;
+import CarShop.Enums.ProducentName;
+import CarShop.Enums.Type;
+
 public class Producent {
     private ProducentName producentName;
     private final Model model;
     private final Type type;
 
-    public enum ProducentName {
-        TOYOTA, BMW, AUDI, VOLVO
-    }
 
-    public enum Model {
-        COROLLA, AVENSIS, YARIS,
-        X3, Z4_ROADSTER, i4M50,
-        A3, A6,
-        S60, C30
-
-    }
-
-    public enum Type {
-        SEDAN, MIKRO, KABRIOLET, SUV, COUPE
-
-    }
     public Producent(Model model, Type type) {
         this.model = model;
         this.type = type;
